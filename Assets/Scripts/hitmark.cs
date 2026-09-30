@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class hitmark : MonoBehaviour
 {
-    public bool leftactive = false;
-
+    public GameObject incollision=null;
     public int suspiction = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,38 +13,38 @@ public class hitmark : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(InputAction.CallbackContext context)
+    void Update()
     {
         
     }
-    public void arrows ()
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void arrows(InputAction.CallbackContext context)
     {
-        if (gameObject.CompareTag("arrowtap"))
+        if (context.performed)
         {
-            incollisionarrow = true;
-            if (leftactive ==true)
+            if (incollision != null)
             {
-                Destroy(collision.gameObject);
+                incollision.gameObject.SetActive(false);
+            }
+            else
+            {
+                SUSPICION.caso.AddSuspicionmisshit(1);
             }
         }
-        else
-        {
-            incollisionarrow = false;
-        }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("arrowtap")&&leftactive == true)
+        if (collision.gameObject.CompareTag("arrowtap"))
         {
-            
-            Destroy(collision.gameObject);
-        }
-        else if (leftactive==true)
-        {
-            suspiction += 1;
+            incollision = collision.gameObject;
         }
     }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("arrowtap"))
+        {
+            incollision = null;
+        }
+    }
+
 
 }

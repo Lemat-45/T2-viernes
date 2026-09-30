@@ -7,71 +7,48 @@
             "id": "e2356d7e-8510-48f8-a7b9-3eabb055c30e",
             "actions": [
                 {
-                    "name": "activate",
-                    "type": "Value",
-                    "id": "b5686152-ff9d-4f1c-b1a9-65ba8a6495de",
-                    "expectedControlType": "Vector2",
+                    "name": "arrib",
+                    "type": "Button",
+                    "id": "7ea7bb83-5cf9-4c31-aa69-6db2a6cdbebc",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "left",
+                    "type": "Button",
+                    "id": "47caed36-c86e-4199-90cb-6aa8a2eb39a6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
                     "priority": 0
                 }
             ],
             "bindings": [
                 {
-                    "name": "2D Vector",
-                    "id": "fd497806-fddf-4b82-b48f-85f1eebc1ca1",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "activate",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "5e8f211a-bb18-4fd3-9228-d96fb6bb1dc1",
+                    "name": "",
+                    "id": "78247700-df8e-4ed6-a95e-260d51781d20",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";New Control Scheme",
-                    "action": "activate",
+                    "groups": "",
+                    "action": "arrib",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
-                    "id": "bc4e55f2-93f4-49f5-87b5-922bff8e0fad",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";New Control Scheme",
-                    "action": "activate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "b0bbf4e4-3af2-4d74-a364-139f24335996",
+                    "name": "",
+                    "id": "d3bbfac1-f1b8-4b0b-8845-5130b139f0f7",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";New Control Scheme",
-                    "action": "activate",
+                    "groups": "",
+                    "action": "left",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "53e308b9-6ab4-426e-b79d-97e188aa9e35",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";New Control Scheme",
-                    "action": "activate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         }

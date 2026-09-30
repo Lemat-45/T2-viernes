@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ARROWSMOVEMENT : MonoBehaviour
+public class ARROWSMOVEMENTvert : MonoBehaviour
 {
     public float speed = -5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -12,6 +12,6 @@ public class ARROWSMOVEMENT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
     }
 }
