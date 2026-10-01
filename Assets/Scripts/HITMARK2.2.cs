@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class hitmark21 : MonoBehaviour
+public class hitmark22 : MonoBehaviour
 {
     public float perfectDistance = 0.5f;  
     public float okDistance = 1.0f;       
@@ -60,6 +60,9 @@ public class hitmark21 : MonoBehaviour
     private GameObject FindClosestArrowizq()
     {
         GameObject[] arrows = GameObject.FindGameObjectsWithTag("arrowtap");
+        Debug.Log($"[{gameObject.name}] receiver pos {currentreciever.transform.position} | flechas: {arrows.Length}");
+        foreach (var a in arrows)
+            Debug.Log($"   {a.name} activa:{a.activeInHierarchy} pos:{a.transform.position} dist:{Vector2.Distance(currentreciever.transform.position, a.transform.position)}");
         GameObject closest = null;
         float shortestDistance = Mathf.Infinity;
 

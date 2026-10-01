@@ -6,9 +6,7 @@ public class hitmark2 : MonoBehaviour
 {
     public float perfectDistance = 0.5f;  
     public float okDistance = 1.0f;       
-    public float maxHitDistance = 1.8f;   
-
-    public int suspicion = 0;
+    public float maxHitDistance = 1.8f;
 
     void Start() 
     {
