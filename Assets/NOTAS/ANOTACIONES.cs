@@ -13,7 +13,8 @@ public class ANOTACIONES : MonoBehaviour
     {
         
     }
-    /* notas musicales:
+    /* 
+     notas musicales:
      para la pantera rosa
      (todo está calibrado a una velocidad de 5.0f en unity Y  116 BPM)
      una redonda es igual a 10.34 unidades de DISTANCIA en unity
