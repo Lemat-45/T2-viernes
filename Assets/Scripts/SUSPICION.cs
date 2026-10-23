@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class SUSPICION : MonoBehaviour
 {
-    public int suspicion = 0;
+    public float suspicion = 12f;
+    public GameObject flameleft;
+    public GameObject flameright;
     public static SUSPICION caso;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,26 +15,35 @@ public class SUSPICION : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (flameleft.transform.position.x > suspicion)
+        {
+            flameleft.transform.position -= new Vector3(0.3f, 0, 0) * Time.deltaTime;
+        }
+        else if (flameleft.transform.position.x < suspicion)
+        {
+            flameleft.transform.position += new Vector3(0.3f, 0, 0) * Time.deltaTime;
+        }
     }
     public void AddSuspicionmisshit(int amount)
     {
         suspicion += amount;
-        if (suspicion >= 100)
+        if (suspicion >= 103)
         {
             Debug.Log("lo cogiero nmijo");
+            //aqui la funcion de game over
         }
-        if (suspicion < 0)
+        if (suspicion < 3)
         {
-            suspicion += -amount;
+            suspicion = 3;
         }
     }
     public void AddSuspicionmiss()
     {
-        suspicion += 10;
-        if(suspicion >= 100)
+        suspicion -= 10;
+        if(suspicion >= 0)
         {
             Debug.Log("lo cogiero nmijo");
+            //aqui la funcion de game over
         }
     }
 }

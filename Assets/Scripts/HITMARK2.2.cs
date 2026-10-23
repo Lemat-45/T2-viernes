@@ -34,17 +34,17 @@ public class hitmark22 : MonoBehaviour
                 {
                     Debug.Log($"epa Distance: {distance}"); //para revisar estoy mamado del object checker ajsjs
                     targetArrow.SetActive(false);
-                    SUSPICION.caso.AddSuspicionmisshit(-5);
+                    SUSPICION.caso.AddSuspicionmisshit(-0.45f);
                 }
                 else if (distance <= okDistance)
                 {
                     Debug.Log($"puesss que uno diga le dió ps NO Distance: {distance}");
                     targetArrow.SetActive(false);
-                    SUSPICION.caso.AddSuspicionmisshit(1);
+                    SUSPICION.caso.AddSuspicionmisshit(0.09f);
                 }
                 else
                 {
-                    SUSPICION.caso.AddSuspicionmisshit(5);
+                    SUSPICION.caso.AddSuspicionmisshit(0.45f);
                     Debug.Log($"fallo Distancia: {distance}");
                 }
             }
