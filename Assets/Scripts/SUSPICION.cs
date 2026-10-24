@@ -24,7 +24,7 @@ public class SUSPICION : MonoBehaviour
             flameleft.transform.position += new Vector3(0.3f, 0, 0) * Time.deltaTime;
         }
     }
-    public void AddSuspicionmisshit(int amount)
+    public void AddSuspicionmisshit(float amount)
     {
         suspicion += amount;
         if (suspicion >= 103)
