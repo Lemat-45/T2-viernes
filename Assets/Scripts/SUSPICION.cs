@@ -15,31 +15,39 @@ public class SUSPICION : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (flameleft.transform.position.x > suspicion)
+        if (flameleft.transform.position.x > -suspicion)
         {
-            flameleft.transform.position -= new Vector3(0.3f, 0, 0) * Time.deltaTime;
+            flameleft.transform.position -= new Vector3(1f, 0, 0) * Time.deltaTime;
         }
-        else if (flameleft.transform.position.x < suspicion)
+        else if (flameleft.transform.position.x < -suspicion)
         {
-            flameleft.transform.position += new Vector3(0.3f, 0, 0) * Time.deltaTime;
+            flameleft.transform.position += new Vector3(1f, 0, 0) * Time.deltaTime;
+        }
+        if (flameright.transform.position.x > suspicion)
+        {
+            flameright.transform.position -= new Vector3(1f, 0, 0) * Time.deltaTime;
+        }
+        else if (flameright.transform.position.x < suspicion)
+        {
+            flameright.transform.position += new Vector3(1f, 0, 0) * Time.deltaTime;
         }
     }
     public void AddSuspicionmisshit(float amount)
     {
         suspicion += amount;
-        if (suspicion >= 103)
+        if (suspicion >= 12)
         {
-            Debug.Log("lo cogiero nmijo");
-            //aqui la funcion de game over
+            suspicion = 12;
         }
         if (suspicion < 3)
         {
             suspicion = 3;
+            //aqui la funcion de game over
         }
     }
     public void AddSuspicionmiss()
     {
-        suspicion -= 10;
+        suspicion -= 0.9f;
         if(suspicion >= 0)
         {
             Debug.Log("lo cogiero nmijo");

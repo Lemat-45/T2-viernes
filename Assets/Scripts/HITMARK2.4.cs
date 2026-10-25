@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 
 public class hitmark24 : MonoBehaviour
 {
-    public float perfectDistance = 0.5f;  
-    public float okDistance = 1.0f;       
-    public float maxHitDistance = 1.8f;
+    public float perfectDistance = 1.0f;
+    public float okDistance = 1.5f;
+    public float maxHitDistance = 2.3f;
     public GameObject currentreciever;
 
     void Start() 
@@ -34,22 +34,23 @@ public class hitmark24 : MonoBehaviour
                 {
                     Debug.Log($"epa Distance: {distance}"); //para revisar estoy mamado del object checker ajsjs
                     targetArrow.SetActive(false);
-                    SUSPICION.caso.AddSuspicionmisshit(-5);
+                    SUSPICION.caso.AddSuspicionmisshit(0.9f);
                 }
                 else if (distance <= okDistance)
                 {
                     Debug.Log($"puesss que uno diga le dió ps NO Distance: {distance}");
                     targetArrow.SetActive(false);
-                    SUSPICION.caso.AddSuspicionmisshit(1);
+                    SUSPICION.caso.AddSuspicionmisshit(0.7f);
                 }
                 else
                 {
-                    SUSPICION.caso.AddSuspicionmisshit(5);
+                    SUSPICION.caso.AddSuspicionmisshit(-0.6f);
                     Debug.Log($"fallo Distancia: {distance}");
                 }
             }
             else
             {
+                SUSPICION.caso.AddSuspicionmisshit(-0.3f);
                 // No arrows are on screen or near the hitmark at all
                 Debug.Log("no hay nada ome sapo");
             }
