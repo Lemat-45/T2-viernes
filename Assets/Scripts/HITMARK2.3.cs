@@ -8,10 +8,11 @@ public class hitmark23 : MonoBehaviour
     public float okDistance = 1.5f;
     public float maxHitDistance = 2.3f;
     public GameObject currentreciever;
+    public Animator animator;
 
-    void Start() 
+    void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
