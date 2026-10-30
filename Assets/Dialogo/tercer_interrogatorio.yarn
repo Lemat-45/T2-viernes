@@ -1,0 +1,98 @@
+title: Interrogatorio3
+---
+La sala de interrogatorios. Jerónimo está sentado frente a Logan. Jessica permanece de pie a un lado.
+
+Logan: Jessica, déjanos a solas un momento.
+Jessica: ¿Está seguro, comandante?
+Logan: Sí. Quiero hablar con mi hijo.
+
+Jessica mira brevemente a Jerónimo antes de salir. La puerta se cierra. Hay unos segundos de silencio.
+
+(Jerónimo piensa) Nunca me había gustado estar en esta habitación. Pero estar aquí con él es todavía peor.
+
+Logan: Bueno... Por fin podemos hablar sin que nadie nos interrumpa.
+Jerónimo: ¿No hemos hablado ya bastante?
+Logan: No como padre e hijo.
+
+Logan: He escuchado lo que ocurrió durante el ataque. También sé que desapareciste durante casi un día.
+Jerónimo: Ya he explicado lo que pasó.
+Logan: Me refiero a otra cosa. Te conozco desde que eras un niño, Jerónimo. Sé cuándo estás asustado, cuándo estás enfadado... y cuándo intentas ocultarme algo.
+
+Logan hace una pausa.
+
+Logan: Últimamente parece que ya no sabes qué pensar de nada.
+Jerónimo: ¿Y eso es un problema?
+Logan: Depende. Cuestionar las cosas no es malo. Pero hay decisiones que pueden costarte la vida. Y no pienso quedarme de brazos cruzados mientras te pones en peligro.
+Jerónimo: No soy un niño.
+Logan: Para mí siempre serás mi hijo.
+
+Silencio breve. Logan aparta la mirada.
+
+Logan: Ya perdí a alguien a quien quería por culpa de esta guerra. No pienso perderte también a ti.
+
+Jerónimo: ¿Y si lo que me pone en peligro no es la guerra, sino todo lo que nos han enseñado sobre ella?
+Logan: ¿Qué quieres decir?
+Jerónimo: He visto cómo hablan de nosotros en Salgic. Nos consideran monstruos, igual que aquí nos enseñan a considerarlos monstruos a ellos.
+Logan: ¿Y qué esperabas? Estamos en guerra.
+Jerónimo: Que al menos hubiera alguien dispuesto a preguntarse por qué.
+Logan: ¿Crees que yo no me lo he preguntado? ¿Crees que no he visto lo que la guerra les hace a las personas?
+Jerónimo: Entonces, ¿por qué seguimos luchando?
+Logan: Porque si dejamos de luchar mientras ellos siguen avanzando, los que pagarán las consecuencias serán los nuestros.
+Jerónimo: ¿Y si ellos piensan exactamente lo mismo?
+
+Logan guarda silencio. Parece querer responder, pero finalmente suspira.
+
+Logan: No entiendes lo que me estás pidiendo.
+Jerónimo: Quizá porque nunca me lo has explicado.
+
+Logan: Solo necesito saber una cosa, Jerónimo. Después de todo lo que has visto, ¿sigues confiando en mí?
+
+-> Sí. Solo necesito entender algunas cosas.
+    <<jump FinalConfianza>>
+-> Ya no sé si puedo confiar en ti.
+    <<jump FinalSoledad>>
+===
+
+title: FinalConfianza
+---
+Jerónimo: Sí. Confío en ti. Pero eso no significa que siempre vaya a estar de acuerdo contigo.
+Logan: Supongo que no debería esperar que mi hijo pensara exactamente como yo.
+Jerónimo: No te estoy pidiendo que cambies de opinión. Solo que me escuches.
+
+Logan lo observa durante unos segundos.
+
+Logan: Está bien. Por hoy, es suficiente.
+
+Se levanta y abre la puerta.
+
+Logan: Vete a casa. Descansa. Mañana hablaremos de lo que haremos a partir de ahora.
+Jerónimo: Gracias, padre.
+
+Transición a la escena de la casa.
+<<cambiar_escena Iglesia>>
+===
+
+title: FinalSoledad
+---
+Jerónimo: No lo sé. Cada vez que intento entender lo que está pasando, siento que esperas que deje de hacer preguntas y me limite a obedecer.
+Logan: ¿Eso es lo que piensas de mí?
+Jerónimo: Pienso que tienes tanto miedo de perderme que no me permites decidir por mí mismo.
+Logan: ¡Estoy intentando protegerte!
+Jerónimo: ¿Incluso de las cosas que todavía no comprendes?
+
+Logan se queda inmóvil. Su expresión se endurece.
+
+Logan: Creo que no estás en condiciones de decidir qué es lo mejor para ti.
+Jerónimo: Entonces nunca me dejarás decidir.
+Logan: No voy a discutir contigo mientras sigas pensando así.
+
+Logan se dirige a la puerta y llama a los guardias.
+
+Logan: Llévenlo a una celda. Hasta que sepamos qué ocurrió realmente en Salgic, no puede marcharse.
+
+(Jerónimo piensa) No sé qué esperaba que ocurriera. Quizá una explicación. Quizá que, por una vez, me escuchara.
+
+Los guardias se llevan a Jerónimo. Fundido a negro.
+
+Fin del desenlace. Soledad.
+===
