@@ -17,22 +17,22 @@ public class CamMove : MonoBehaviour
     }
     public void arrowup(InputAction.CallbackContext context)
     {
-        transform.position = new Vector3(0f, 1, 0);
+        transform.position = new Vector3(0f, 0.5f, 0);
         StartCoroutine(waitbeforreturn());
     }
     public void arrowdown(InputAction.CallbackContext context)
     {
-        transform.position = new Vector3(0f, -1, 0);
+        transform.position = new Vector3(0f, -0.5F, 0);
         StartCoroutine(waitbeforreturn());
     }
     public void arrowright(InputAction.CallbackContext context)
     {
-        transform.position = new Vector3(1f, 0, 0);
+        transform.position = new Vector3(0.5f, 0, 0);
         StartCoroutine(waitbeforreturn());
     }   
     public void arrowleft(InputAction.CallbackContext context)
     {   
-        transform.position = new Vector3(-1f, -1, 0);
+        transform.position = new Vector3(-0.5f, -1, 0);
         StartCoroutine(waitbeforreturn());
     }
     IEnumerator waitbeforreturn()
