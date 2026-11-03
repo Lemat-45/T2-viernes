@@ -26,5 +26,7 @@ public class ANOTACIONES : MonoBehaviour
      usa el objeto "group mover" para mover varias flechas la vez en caso de que haya un error mayor en las sumas
     RECUERDA todos las flechas deben estar a la distancia que sea correcta para los silencios y siempre a todo restarle -3.67
     pues los recievers están a esa distancia por debajo del 0
+
+    la pantera rosa va hasta el minuto 1:25 aprox
      */
 }
