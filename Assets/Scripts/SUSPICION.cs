@@ -48,7 +48,7 @@ public class SUSPICION : MonoBehaviour
     public void AddSuspicionmiss()
     {
         suspicion -= 0.9f;
-        if(suspicion >= 0)
+        if(suspicion >= 3)
         {
             Debug.Log("lo cogiero nmijo");
             //aqui la funcion de game over
