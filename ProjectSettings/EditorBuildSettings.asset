@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Iglesia.unity
     guid: 806460985e7cfc841948def2fb61d77d
+  - enabled: 1
+    path: Assets/Scenes/Destruido.unity
+    guid: 073b0358850b02c40a3946885075dbbc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
