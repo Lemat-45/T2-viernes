@@ -253,6 +253,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fd8423a133e124a9f77c4b00dd6487, type: 3}
+--- !u!1 &7311158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3585891789845605775, guid: a5fd8423a133e124a9f77c4b00dd6487, type: 3}
+  m_PrefabInstance: {fileID: 7311157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &16770103
 GameObject:
   m_ObjectHideFlags: 0
@@ -12211,7 +12216,7 @@ MonoBehaviour:
   suspicion: 12
   flameleft: {fileID: 2103362186}
   flameright: {fileID: 1250964788}
-  lastarrow: {fileID: 0}
+  lastarrow: {fileID: 7311158}
   Detective: {fileID: 1671286479}
   Detanima: {fileID: 0}
 --- !u!212 &1694520015

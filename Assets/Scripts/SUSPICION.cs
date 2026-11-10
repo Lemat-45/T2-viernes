@@ -36,6 +36,17 @@ public class SUSPICION : MonoBehaviour
         {
             flameright.transform.position += new Vector3(2f, 0, 0) * Time.deltaTime;
         }
+        if (!lastarrow.activeSelf)
+        {
+            if (suspicion > 7)
+            {
+                //trusted
+            }
+            else if (suspicion <= 5)
+            {
+                //untrusted
+            }
+        }
     }
     public void AddSuspicionmisshit(float amount)
     {
