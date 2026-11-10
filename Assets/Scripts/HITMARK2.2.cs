@@ -4,10 +4,12 @@ using UnityEngine.InputSystem;
 
 public class hitmark22 : MonoBehaviour
 {
-    public float perfectDistance = 1.0f;
-    public float okDistance = 1.5f;
+    public float perfectDistance = 0.8f;
+    public float okDistance = 1.0f;
     public float maxHitDistance = 2.3f;
     public GameObject currentreciever;
+    public GameObject Detective;
+    public Animator Detanima;
     public Animator animator;
 
     void Start() 
