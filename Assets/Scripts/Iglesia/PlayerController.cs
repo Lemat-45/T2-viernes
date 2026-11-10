@@ -26,14 +26,24 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateDirection(Vector2 move)
     {
-        if (move == Vector2.zero) return;  
+        if (move == Vector2.zero)
+        {
+        
+            animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, 0, 0f);
+            animator.speed = 0f;
+            return;
+        }
+
+        animator.speed = 1f;
 
         int dir;
         if (Mathf.Abs(move.x) > Mathf.Abs(move.y))
-            dir = move.x > 0 ? 3 : 2;       
+            dir = move.x > 0 ? 3 : 2;
         else
-            dir = move.y > 0 ? 1 : 0;       
+            dir = move.y > 0 ? 1 : 0;
 
-        animator.SetInteger("Direction", dir);
+        if (animator.GetInteger("Direction") != dir)
+            animator.SetInteger("Direction", dir);
     }
+
 }
