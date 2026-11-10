@@ -1,18 +1,23 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class hitmark23 : MonoBehaviour
 {
-    public float perfectDistance = 1.0f;
-    public float okDistance = 1.5f;
+    public bool pressed;
+    public float perfectDistance = 0.8f;
+    public float okDistance = 1.0f;
     public float maxHitDistance = 2.3f;
     public GameObject currentreciever;
     public Animator animator;
+    public GameObject Detective;
+    public Animator Detanima;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        Detanima = Detective.GetComponent<Animator>();
     }
     void Update()
     {
@@ -24,6 +29,7 @@ public class hitmark23 : MonoBehaviour
         //por si se le olvido lema de dentro de 3 días esto es lo que pasa si la flecha en cuestión es presionada
         if (context.performed)
         {
+            StartCoroutine(keypressed());
             GameObject targetArrow = FindClosestArrowup();
 
             if (targetArrow != null)
@@ -78,6 +84,16 @@ public class hitmark23 : MonoBehaviour
         }
 
         return closest;
+    }
+    IEnumerator keypressed()
+    {
+        Detanima.SetBool("left?", false);
+        Detanima.SetBool("up?", false);
+        Detanima.SetBool("right?", false);
+        animator.SetBool("pressed", true);
+        yield return new WaitForSeconds(0.5f);
+
+        animator.SetBool("pressed", false);
     }
 }
 //RECUERDA QUE ESTA VAINA SE SOLUCIONA HACIENDO UN OBJETO NUEVO DIFERENTE AL QUE ESTÉ FUNCIONANDO ACTUALMENTE, PUEDES TRATAR DE SEPARAR LOS HITMARKS PERO POR AHORA TRATA ESO ESTOY MUY CANSADO POR AHORA PARA SEGUIR
