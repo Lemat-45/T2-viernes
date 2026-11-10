@@ -286,11 +286,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26fbde2441a7d84993020792036e736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitmark23
+  pressed: 0
   perfectDistance: 0.5
   okDistance: 1
   maxHitDistance: 1.8
   currentreciever: {fileID: 16770103}
   animator: {fileID: 0}
+  Detective: {fileID: 0}
+  Detanima: {fileID: 0}
 --- !u!50 &16770105
 Rigidbody2D:
   serializedVersion: 5
@@ -4725,6 +4728,7 @@ GameObject:
   - component: {fileID: 688758737}
   - component: {fileID: 688758736}
   - component: {fileID: 688758735}
+  - component: {fileID: 688758738}
   m_Layer: 0
   m_Name: barra espaciadora_0
   m_TagString: Untagged
@@ -4892,11 +4896,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd8c041912d0cb4bbd4ce6db8c85b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitmark25
+  pressed: 0
   perfectDistance: 1
   okDistance: 1.5
   maxHitDistance: 2.3
   currentreciever: {fileID: 688758732}
   animator: {fileID: 0}
+--- !u!95 &688758738
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688758732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5c87705a8b956b4fbabb2c8f8630cf0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &700047386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6489,6 +6516,7 @@ GameObject:
   - component: {fileID: 902302579}
   - component: {fileID: 902302578}
   - component: {fileID: 902302582}
+  - component: {fileID: 902302583}
   m_Layer: 0
   m_Name: DETECTOR RIGHT
   m_TagString: Untagged
@@ -6656,11 +6684,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c93d9966761e644aa6afd18af9cf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitmark24
+  pressed: 0
   perfectDistance: 0.5
   okDistance: 1
   maxHitDistance: 1.8
   currentreciever: {fileID: 902302577}
   animator: {fileID: 0}
+  Detective: {fileID: 0}
+  Detanima: {fileID: 0}
+--- !u!95 &902302583
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902302577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5c87705a8b956b4fbabb2c8f8630cf0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &911742845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10940,11 +10993,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a0690a3ce3fc64292e30348afcbf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitmark21
+  pressed: 0
   perfectDistance: 0.5
   okDistance: 1
   maxHitDistance: 1.8
   currentreciever: {fileID: 1555891367}
   animator: {fileID: 0}
+  Detective: {fileID: 0}
+  Detanima: {fileID: 0}
 --- !u!95 &1555891375
 Animator:
   serializedVersion: 7
@@ -13066,6 +13122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb2eadc1eab0584994bf4075bcb319d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hitmark22
+  pressed: 0
   perfectDistance: 0.5
   okDistance: 1
   maxHitDistance: 1.8

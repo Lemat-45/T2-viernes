@@ -1,9 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class hitmark25 : MonoBehaviour
 {
+    public bool pressed;
     public float perfectDistance = 1.0f;
     public float okDistance = 1.5f;
     public float maxHitDistance = 2.3f;
@@ -24,6 +26,7 @@ public class hitmark25 : MonoBehaviour
         //por si se le olvido lema de dentro de 3 días esto es lo que pasa si la flecha en cuestión es presionada
         if (context.performed)
         {
+            StartCoroutine(keypressed());
             GameObject targetArrow = FindClosestArrowright();
 
             if (targetArrow != null)
@@ -78,6 +81,14 @@ public class hitmark25 : MonoBehaviour
         }
 
         return closest;
+    }
+
+    IEnumerator keypressed()
+    {
+        animator.SetBool("pressed", true);
+        yield return new WaitForSeconds(0.3f);
+
+        animator.SetBool("pressed", false);
     }
 }
 //RECUERDA QUE ESTA VAINA SE SOLUCIONA HACIENDO UN OBJETO NUEVO DIFERENTE AL QUE ESTÉ FUNCIONANDO ACTUALMENTE, PUEDES TRATAR DE SEPARAR LOS HITMARKS PERO POR AHORA TRATA ESO ESTOY MUY CANSADO POR AHORA PARA SEGUIR

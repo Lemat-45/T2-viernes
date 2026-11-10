@@ -30,6 +30,7 @@ public class hitmark21 : MonoBehaviour
         //por si se le olvido lema de dentro de 3 días esto es lo que pasa si la flecha en cuestión es presionada
         if (context.performed)
         {
+            StartCoroutine(keypressed());
             GameObject targetArrow = FindClosestArrowizq();
 
             if (targetArrow != null)
@@ -85,11 +86,12 @@ public class hitmark21 : MonoBehaviour
 
         return closest;
     }
-    IEnumerator failure()
+    IEnumerator keypressed()
     {
-        pressed = true;
-        yield return new WaitForSeconds(0.2f);
-        pressed = false;
+        animator.SetBool("pressed", true);
+        yield return new WaitForSeconds(0.3f);
+
+        animator.SetBool("pressed", false);
     }
 }
 //RECUERDA QUE ESTA VAINA SE SOLUCIONA HACIENDO UN OBJETO NUEVO DIFERENTE AL QUE ESTÉ FUNCIONANDO ACTUALMENTE, PUEDES TRATAR DE SEPARAR LOS HITMARKS PERO POR AHORA TRATA ESO ESTOY MUY CANSADO POR AHORA PARA SEGUIR
