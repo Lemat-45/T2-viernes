@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.linearVelocity = direction * speed;
+        if (rb.linearVelocity.sqrMagnitude < 0.01f)
+        {
+            animator.SetInteger("Direction", -1);
+        }
+   
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -26,16 +31,6 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateDirection(Vector2 move)
     {
-        if (move == Vector2.zero)
-        {
-        
-            animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, 0, 0f);
-            animator.speed = 0f;
-            return;
-        }
-
-        animator.speed = 1f;
-
         int dir;
         if (Mathf.Abs(move.x) > Mathf.Abs(move.y))
             dir = move.x > 0 ? 3 : 2;

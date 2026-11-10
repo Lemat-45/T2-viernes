@@ -42,7 +42,7 @@ public class SUSPICION : MonoBehaviour
             {
                 //trusted
             }
-            else if (suspicion <= 5)
+            else if (suspicion <= 7)
             {
                 //untrusted
             }
@@ -63,7 +63,6 @@ public class SUSPICION : MonoBehaviour
         if (suspicion < 2)
         {
             suspicion = 2;
-            //aqui la funcion de game over
         }
     }
     public void AddSuspicionmiss()
@@ -74,7 +73,6 @@ public class SUSPICION : MonoBehaviour
         {
             suspicion = 2;
             Debug.Log("lo cogiero nmijo");
-            //aqui la funcion de game over
         }
     }
     IEnumerator BAD()
