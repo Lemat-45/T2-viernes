@@ -14,14 +14,14 @@ public class hitmark22 : MonoBehaviour
     public Animator Detanima;
     public Animator animator;
 
-    void Start() 
+    void Start()
     {
         animator = GetComponent<Animator>();
         Detanima = Detective.GetComponent<Animator>();
     }
     void Update()
     {
-        
+
     }
 
     public void arrows(InputAction.CallbackContext context)
@@ -29,7 +29,7 @@ public class hitmark22 : MonoBehaviour
         //por si se le olvido lema de dentro de 3 días esto es lo que pasa si la flecha en cuestión es presionada
         if (context.performed)
         {
-           StartCoroutine(keypressed());
+            StartCoroutine(keypressed());
             GameObject targetArrow = FindClosestArrowizq();
 
             if (targetArrow != null)
@@ -90,10 +90,16 @@ public class hitmark22 : MonoBehaviour
     }
     IEnumerator keypressed()
     {
+        Detanima.SetBool("up?", false);
+        Detanima.SetBool("right?", false);
         animator.SetBool("pressed", true);
-        yield return new WaitForSeconds(0.3f);
+        Detanima.SetBool("left?", true);
+        Detanima.SetBool("NOTIN?", false);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("pressed", false);
+        Detanima.SetBool("left?", false);
+        Detanima.SetBool("NOTIN?", true);
     }
 }
 //RECUERDA QUE ESTA VAINA SE SOLUCIONA HACIENDO UN OBJETO NUEVO DIFERENTE AL QUE ESTÉ FUNCIONANDO ACTUALMENTE, PUEDES TRATAR DE SEPARAR LOS HITMARKS PERO POR AHORA TRATA ESO ESTOY MUY CANSADO POR AHORA PARA SEGUIR

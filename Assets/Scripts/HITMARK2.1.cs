@@ -88,10 +88,16 @@ public class hitmark21 : MonoBehaviour
     }
     IEnumerator keypressed()
     {
+        Detanima.SetBool("left?", false);
+        Detanima.SetBool("right?", false);
         animator.SetBool("pressed", true);
-        yield return new WaitForSeconds(0.3f);
+        Detanima.SetBool("up?", true);
+        Detanima.SetBool("NOTIN?", false);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("pressed", false);
+        Detanima.SetBool("up?", false);
+        Detanima.SetBool("NOTIN?", true);
     }
 }
 //RECUERDA QUE ESTA VAINA SE SOLUCIONA HACIENDO UN OBJETO NUEVO DIFERENTE AL QUE ESTÉ FUNCIONANDO ACTUALMENTE, PUEDES TRATAR DE SEPARAR LOS HITMARKS PERO POR AHORA TRATA ESO ESTOY MUY CANSADO POR AHORA PARA SEGUIR

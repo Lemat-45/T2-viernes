@@ -11,10 +11,13 @@ public class hitmark25 : MonoBehaviour
     public float maxHitDistance = 2.3f;
     public GameObject currentreciever;
     public Animator animator;
+    public GameObject Detective;
+    public Animator Detanima;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        Detanima = Detective.GetComponent<Animator>();
     }
     void Update()
     {
@@ -86,7 +89,7 @@ public class hitmark25 : MonoBehaviour
     IEnumerator keypressed()
     {
         animator.SetBool("pressed", true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("pressed", false);
     }

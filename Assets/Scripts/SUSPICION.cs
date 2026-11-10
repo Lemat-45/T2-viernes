@@ -5,6 +5,7 @@ public class SUSPICION : MonoBehaviour
     public float suspicion = 12f;
     public GameObject flameleft;
     public GameObject flameright;
+    public GameObject lastarrow;
     public static SUSPICION caso;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,19 +18,19 @@ public class SUSPICION : MonoBehaviour
     {
         if (flameleft.transform.position.x > -suspicion)
         {
-            flameleft.transform.position -= new Vector3(1f, 0, 0) * Time.deltaTime;
+            flameleft.transform.position -= new Vector3(2f, 0, 0) * Time.deltaTime;
         }
         else if (flameleft.transform.position.x < -suspicion)
         {
-            flameleft.transform.position += new Vector3(1f, 0, 0) * Time.deltaTime;
+            flameleft.transform.position += new Vector3(2, 0, 0) * Time.deltaTime;
         }
         if (flameright.transform.position.x > suspicion)
         {
-            flameright.transform.position -= new Vector3(1f, 0, 0) * Time.deltaTime;
+            flameright.transform.position -= new Vector3(2f, 0, 0) * Time.deltaTime;
         }
         else if (flameright.transform.position.x < suspicion)
         {
-            flameright.transform.position += new Vector3(1f, 0, 0) * Time.deltaTime;
+            flameright.transform.position += new Vector3(2f, 0, 0) * Time.deltaTime;
         }
     }
     public void AddSuspicionmisshit(float amount)
@@ -39,17 +40,18 @@ public class SUSPICION : MonoBehaviour
         {
             suspicion = 12;
         }
-        if (suspicion < 3)
+        if (suspicion < 2)
         {
-            suspicion = 3;
+            suspicion = 2;
             //aqui la funcion de game over
         }
     }
     public void AddSuspicionmiss()
     {
         suspicion -= 0.9f;
-        if(suspicion >= 3)
+        if(suspicion >= 2)
         {
+            suspicion = 2;
             Debug.Log("lo cogiero nmijo");
             //aqui la funcion de game over
         }

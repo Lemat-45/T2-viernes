@@ -87,8 +87,11 @@ public class hitmark23 : MonoBehaviour
     }
     IEnumerator keypressed()
     {
+        Detanima.SetBool("left?", false);
+        Detanima.SetBool("up?", false);
+        Detanima.SetBool("right?", false);
         animator.SetBool("pressed", true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         animator.SetBool("pressed", false);
     }
