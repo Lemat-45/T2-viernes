@@ -12212,6 +12212,8 @@ MonoBehaviour:
   flameleft: {fileID: 2103362186}
   flameright: {fileID: 1250964788}
   lastarrow: {fileID: 0}
+  Detective: {fileID: 1671286479}
+  Detanima: {fileID: 0}
 --- !u!212 &1694520015
 SpriteRenderer:
   serializedVersion: 3

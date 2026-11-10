@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SUSPICION : MonoBehaviour
 {
@@ -6,11 +7,14 @@ public class SUSPICION : MonoBehaviour
     public GameObject flameleft;
     public GameObject flameright;
     public GameObject lastarrow;
+    public GameObject Detective;
+    public Animator Detanima;
     public static SUSPICION caso;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         caso = this;
+        Detanima = Detective.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,6 +39,11 @@ public class SUSPICION : MonoBehaviour
     }
     public void AddSuspicionmisshit(float amount)
     {
+        if (amount < 0)
+        {
+
+            StartCoroutine(BAD());
+        }
         suspicion += amount;
         if (suspicion >= 12)
         {
@@ -48,6 +57,7 @@ public class SUSPICION : MonoBehaviour
     }
     public void AddSuspicionmiss()
     {
+        StartCoroutine(BAD());
         suspicion -= 0.9f;
         if(suspicion >= 2)
         {
@@ -55,6 +65,16 @@ public class SUSPICION : MonoBehaviour
             Debug.Log("lo cogiero nmijo");
             //aqui la funcion de game over
         }
+    }
+    IEnumerator BAD()
+    {
+        Detanima.SetBool("left?", false);
+        Detanima.SetBool("up?", false);
+        Detanima.SetBool("right?", false);
+        Detanima.SetBool("fail?", true);
+        yield return new WaitForSeconds(0.5f);
+        Detanima.SetBool("fail?", false);
+
     }
 }
 
